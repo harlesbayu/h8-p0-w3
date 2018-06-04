@@ -154,3 +154,34 @@ function angkaPalindrome(num) {
   console.log(angkaPalindrome(175)); // 181
   console.log(angkaPalindrome(1000)); // 1001
   */
+
+
+/*
+// The Fifth Ways
+function angkaPalindrome(num) {
+
+    for (var i = 0; i < num; i++) {
+        num++;
+       
+        // jadikan angka sebagai string
+        var angkaStr = String(num);
+
+        var tampungString = '';
+        for (var j = (angkaStr.length - 1); j >= 0; j--){
+          tampungString = tampungString + angkaStr[j];
+        }
+
+        // jika angka dalam string samadengan string yang ditampung
+        if(angkaStr === tampungString) {
+          return num;
+        }
+      }
+  }
+  
+  // TEST CASES
+  console.log(angkaPalindrome(8)); // 9
+  console.log(angkaPalindrome(10)); // 11
+  console.log(angkaPalindrome(112)); // 121
+  console.log(angkaPalindrome(175)); // 181
+  console.log(angkaPalindrome(1000)); // 1001
+  */
