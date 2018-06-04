@@ -49,3 +49,12 @@ function balikString3(kalimat3){
 
 var print3 = balikString3("hello world!");
 console.log(print3);
+
+// Cara mudah
+
+function balikString(str){
+  var str2 = str.split('').reverse().join('');
+  return str2
+}
+
+balikString("hello world!");
