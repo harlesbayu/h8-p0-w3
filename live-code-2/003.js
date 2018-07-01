@@ -27,13 +27,12 @@ function breakSentence(sentence) {
    if(sentence[i] !== " "){
      group += sentence[i] 
    }
-   else if(sentence[i] == " "){
+   if(sentence[i] == " " || i === sentence.length-1){
      groups.push(group)
      group = ""
    }
    
   }
-  groups.push(group)
   return groups 
 }
 

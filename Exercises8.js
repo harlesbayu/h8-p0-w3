@@ -28,12 +28,13 @@ function pasanganTerbesar(num) {
     var banding=0;
 
     for(var i = 0; i <str.length; i++) {
-        angka= Number (str[i] + str[i+1]);
+        angka = Number(str[i] + str[i+1]);
         if (angka > banding) {
             banding = angka;
         }
     }
-return banding;
+    
+    return banding;
 }
 console.log(pasanganTerbesar(641573)); // 73
 console.log(pasanganTerbesar(12783456)); // 83

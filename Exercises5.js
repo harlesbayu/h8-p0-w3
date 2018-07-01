@@ -42,21 +42,13 @@ console.log(palindrome('mister')); // false
 
 /*
 //The third ways
-
 function palindrome(kata) {
-// you can only write your code here!
-  var newKata = "";
-  for(var x = (kata.length - 1); x >= 0; x--) {
-    newKata = newKata + kata[x];
-  }
-  if(newKata.toLowerCase() == kata.toLowerCase()) {
-    return true;
-  } else {
-    return false;
-  }
+  // you can only write your code here!
+  var secondWord = kata.split('').reverse().join('')
+  return kata === secondWord
 }
 
-//   TEST CASES
+// TEST CASES
 console.log(palindrome('katak')); // true
 console.log(palindrome('blanket')); // false
 console.log(palindrome('civic')); // true

@@ -1,37 +1,38 @@
-var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
+function dataHandling2(input){
+  input.splice(0 ,5 , "0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro")
+  console.log(input)
 
-function dataHandling2(param1){
-  param1.splice(0, 5, "0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro");
-  
-  console.log(param1);
+  var date = input[3].split('/')
+  var month = Number(date[1][1])
 
-  var tanggal = input[3].split('/');
-  var bulan = tanggal[1];
-  var namaBulan = parseInt(bulan);
-  
-  switch(namaBulan){
-    case 01: bulan = "Januari"; break;
-    case 02: bulan = "Februari"; break;
-    case 03: bulan = "Maret"; break;
-    case 04: bulan = "April"; break;
-    case 05: bulan = "Mei"; break;
-    case 06: bulan = "Juni"; break;
-    case 07: bulan = "Juli"; break;
-    case 08: bulan = "Agustus"; break;
-    case 09: bulan = "September"; break;
-    case 10: bulan = "Oktober"; break;
-    case 11: bulan = "November"; break;
-    case 12: bulan = "Desember"; break;
-  } console.log(bulan);
+  switch(month){
+    case 1: month = 'January'; break;
+    case 2: month = 'February'; break;
+    case 3: month = 'March'; break;
+    case 4: month = 'April'; break;
+    case 5: month = 'May'; break;
+    case 6: month = 'June'; break;
+    case 7: month = 'July'; break;
+    case 8: month = 'August'; break;
+    case 9: month = 'September'; break;
+    case 10: month = 'October'; break;
+    case 11: month = 'November'; break;
+    case 12: month = 'December'; break;
+  }
+  console.log(month)
 
-  tanggal.sort(function(value1, value2){
-    return Number(value2) > Number(value1);
-  }); console.log(tanggal);
+  var sorting = date.sort(function(a,b){
+    return b-a
+  })
+  console.log(sorting)
 
-  console.log(tanggal.join("-"));
+  var dividing = date.join('-')
+  console.log(dividing)
 
-  console.log(param1[1].slice(0,14));
+  var name = input[1].slice(0,15)
+  console.log(name)
 
 }
 
-dataHandling2(input);
+var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"]
+console.log(dataHandling2(input))

@@ -29,19 +29,18 @@ output: []
 
 function pairUp(students) {
   // Code here
-  var tampung = []
-  var str = "";
+  var result = []
+  var groupStudents = ''
   for(var i = 0; i < students.length; i=i+2){
     if(students[i+1] !== undefined){
-      str = students[i] + " dan " + students[i+1]     
+      groupStudents = students[i] + " dan " + students[i+1]
+    } else {
+      groupStudents = students[i] + " dan Instruktur"
     }
-    else {
-      str = students[i] + " dan Instruktur"     
-    }
-
-    tampung.push(str);
+    result.push(groupStudents)
   }
-  return tampung
+
+  return result
   
 }
 

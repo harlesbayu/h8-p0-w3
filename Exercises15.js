@@ -32,33 +32,31 @@ console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'c
 function groupAnimals(animals) {
   // you can only write your code here!
   var groups = []
-
   for(var i = 0; i < animals.length; i++){
-    var isGroup = true
     var group = []
+    var trigger = true
 
     for(var j = 0; j < groups.length; j++){
-      if(groups[j][0][0] === animals[i][0]){
+      if(animals[i][0] === groups[j][0][0]){
         groups[j].push(animals[i])
-        isGroup = false
+        trigger = false
       }
     }
 
-    if(isGroup){
+    if(trigger){
       group.push(animals[i])
       groups.push(group)
     }
+
   }
-
   return groups
-
 }
 
 // TEST CASES
 console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));
 // [ ['ayam', 'anoa'], ['cacing'], ['kuda', 'kancil'] ]
-//console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak' ]));
-// [ ['ayam', 'anoa'], ['cacing', 'cicak'], ['kuda'], ['unta'] ]
+// console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak' ]));
+// // [ ['ayam', 'anoa'], ['cacing', 'cicak'], ['kuda'], ['unta'] ]
 */
 
 

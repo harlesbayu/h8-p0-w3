@@ -1,16 +1,16 @@
 function perkalianUnik(arr) {
 // you can only write your code here!
-    var hasil = [];
-    for(var i = 0; i < arr.length; i++){
-        var times = 1;
-        for(var j = 0; j < arr.length; j++){
-            if(i !== j){
-                times *= arr[j];
-            }
-        }
-        hasil.push(times);
-    }
-    return hasil;
+  var hasil = [];
+  for(var i = 0; i < arr.length; i++){
+      var times = 1;
+      for(var j = 0; j < arr.length; j++){
+          if(i !== j){
+              times *= arr[j];
+          }
+      }
+      hasil.push(times);
+  }
+  return hasil;
 }
 
 // TEST CASES
